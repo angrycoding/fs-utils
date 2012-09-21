@@ -5,11 +5,11 @@
 		<exec dir="." executable="/Developer/flex_sdk_4/bin/mxmlc">
 			<arg line="-static-link-runtime-shared-libraries=true" />
 			<arg line="-output=fsutils.swf" />
-			<arg line="fsutils.as" />
+			<arg line="src/fsutils.as" />
 		</exec>
 		<exec executable="java">
 			<arg line="-jar build/compiler.jar" />
-			<arg line="--js jquery.fsutils.js" />
+			<arg line="--js src/jquery.fsutils.js" />
 			<arg line="--js_output_file jquery.fsutils.min.js" />
 		</exec>
 	</target>
