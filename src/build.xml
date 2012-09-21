@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="fsutils" default="build" basedir=".">
+
 	<target name="build" description="build fsutils">
 		<exec dir="." executable="/Developer/flex_sdk_4/bin/mxmlc">
 			<arg line="-static-link-runtime-shared-libraries=true" />
 			<arg line="-output=fsutils.swf" />
 			<arg line="fsutils.as" />
+		</exec>
+		<exec executable="java">
+			<arg line="-jar lib/compiler.jar" />
+			<arg line="--js jquery.fsutils.js" />
+			<arg line="--js_output_file jquery.fsutils.min.js" />
 		</exec>
 	</target>
 </project>
