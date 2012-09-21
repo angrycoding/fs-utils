@@ -8,7 +8,7 @@
 			<arg line="fsutils.as" />
 		</exec>
 		<exec executable="java">
-			<arg line="-jar lib/compiler.jar" />
+			<arg line="-jar build/compiler.jar" />
 			<arg line="--js jquery.fsutils.js" />
 			<arg line="--js_output_file jquery.fsutils.min.js" />
 		</exec>
